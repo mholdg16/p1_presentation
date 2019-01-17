@@ -17,9 +17,18 @@
 Når $a \ne 0$, er der to løsninger til $ax^2 + bx + c = 0$, og de findes ved
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
+Note: Rasmus laver lige nogle formler omkring ROC-AUC.
+
 ===
 
 # KODESTYKKER
+
+```c
+int main(void)
+{
+    return 0;
+}
+```
 
 ---
 
