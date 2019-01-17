@@ -1,9 +1,21 @@
+<br><br>
+
+### Automatisk klassifikation af clickbait
+
+Gruppe A307
+
+<br>
+
+![aau logo](images/AAU_STUDENTERRAPPORT_white_rgb.png) <!-- .element: class="plain" -->
+
+--------------------------------------------------------------------------------
+
 ## Disposition
 
 1. **Problemanalyse**
    <span class="aside">*Lisa Engen*</span>
 
-2. **Demo**
+2. **Demonstration**
    <span class="aside">*Mathias Holdgaard*</span>
 
 3. **Analyse af features**

@@ -83,6 +83,14 @@ $selectionBackgroundColor: $magenta;
 				margin: 1em 0em;
 			}
 
+			h1, h2, h3, h4, h5, h6 {
+				&.with-background {
+					background-color: $headingColor;
+					color: $backgroundColor;
+					padding-top: .05em;
+				}
+			}
+
 			img.plain {
 				background: none;
 			}
@@ -197,6 +205,23 @@ $selectionBackgroundColor: $magenta;
 			.highlight-red, .highlight-current-red { &:after { box-shadow: 0px 0px 0px 4px $red } }
 			.highlight-green, .highlight-current-green { &:after { box-shadow: 0px 0px 0px 4px $green } }
 			.highlight-blue, .highlight-current-blue { &:after { box-shadow: 0px 0px 0px 4px $blue } }
+		}
+	}
+
+	.backgrounds {
+		.slide-background.stack.present:after {
+			content: ' ';
+			position: absolute;
+			left: 0; top: 100%; right: 0; bottom: 0;
+			background-color: rgba($backgroundColor, .4);
+			z-index: 1000;
+			opacity: 0;
+			transition: opacity .1s;
+
+			.background-overlay & {
+				top: 0;
+				opacity: 1;
+			}
 		}
 	}
 }
