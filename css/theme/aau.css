@@ -1,0 +1,487 @@
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(../../lib/font/fira-code/fira-code.css);
+@font-face {
+  font-family: 'aauservice';
+  src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.eot");
+  src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.eot?#iefix") format("embedded-opentype"), url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.woff") format("woff"), url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'aauother';
+  src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.eot");
+  src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.eot?#iefix") format("embedded-opentype"), url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.woff") format("woff"), url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #211952;
+  background-color: #211952; }
+
+.reveal {
+  font-family: "Lato", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #ffffff; }
+
+::selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-family: "League Gothic", Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 3.77em; }
+
+.reveal h2 {
+  font-size: 2.11em; }
+
+.reveal h3 {
+  font-size: 1.55em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #4306dd;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #d9d9d9; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #ffffff; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff; }
+
+.reveal .progress span {
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #211952; } }
+
+.reveal .slides section .MathJax_Display {
+  text-align: center;
+  margin: 1em 0em; }
+
+.reveal .slides section a:after {
+  text-transform: none;
+  font-family: "aauother";
+  margin-left: .3em;
+  position: relative;
+  bottom: -.15em;
+  content: 'y'; }
+
+.reveal .slides section ul {
+  list-style: none; }
+  .reveal .slides section ul li:before {
+    content: 'w';
+    display: inline-block;
+    position: relative;
+    top: -.75em;
+    left: -2em;
+    width: 1.5em;
+    line-height: 1.5em;
+    font-family: "aauother";
+    font-size: .3em;
+    text-transform: none;
+    text-align: center;
+    background-color: #ffffff;
+    color: #211952;
+    border-radius: 50%; }
+
+.reveal .slides section pre {
+  box-shadow: none; }
+  .reveal .slides section pre, .reveal .slides section pre code {
+    font-family: 'Fira Code'; }
+  .reveal .slides section pre code {
+    padding: 10px 5px 10px 20px;
+    display: block;
+    height: auto;
+    max-height: 600px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border-radius: 8px; }
+    .reveal .slides section pre code .hljs-line[data-indentation="1"] {
+      padding-left: 0.6em;
+      text-indent: -0.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="2"] {
+      padding-left: 1.2em;
+      text-indent: -1.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="3"] {
+      padding-left: 1.8em;
+      text-indent: -1.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="4"] {
+      padding-left: 2.4em;
+      text-indent: -2.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="5"] {
+      padding-left: 3em;
+      text-indent: -3em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="6"] {
+      padding-left: 3.6em;
+      text-indent: -3.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="7"] {
+      padding-left: 4.2em;
+      text-indent: -4.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="8"] {
+      padding-left: 4.8em;
+      text-indent: -4.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="9"] {
+      padding-left: 5.4em;
+      text-indent: -5.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="10"] {
+      padding-left: 6em;
+      text-indent: -6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="11"] {
+      padding-left: 6.6em;
+      text-indent: -6.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="12"] {
+      padding-left: 7.2em;
+      text-indent: -7.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="13"] {
+      padding-left: 7.8em;
+      text-indent: -7.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="14"] {
+      padding-left: 8.4em;
+      text-indent: -8.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="15"] {
+      padding-left: 9em;
+      text-indent: -9em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="16"] {
+      padding-left: 9.6em;
+      text-indent: -9.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="17"] {
+      padding-left: 10.2em;
+      text-indent: -10.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="18"] {
+      padding-left: 10.8em;
+      text-indent: -10.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="19"] {
+      padding-left: 11.4em;
+      text-indent: -11.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="20"] {
+      padding-left: 12em;
+      text-indent: -12em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="21"] {
+      padding-left: 12.6em;
+      text-indent: -12.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="22"] {
+      padding-left: 13.2em;
+      text-indent: -13.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="23"] {
+      padding-left: 13.8em;
+      text-indent: -13.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="24"] {
+      padding-left: 14.4em;
+      text-indent: -14.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="25"] {
+      padding-left: 15em;
+      text-indent: -15em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="26"] {
+      padding-left: 15.6em;
+      text-indent: -15.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="27"] {
+      padding-left: 16.2em;
+      text-indent: -16.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="28"] {
+      padding-left: 16.8em;
+      text-indent: -16.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="29"] {
+      padding-left: 17.4em;
+      text-indent: -17.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="30"] {
+      padding-left: 18em;
+      text-indent: -18em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="31"] {
+      padding-left: 18.6em;
+      text-indent: -18.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="32"] {
+      padding-left: 19.2em;
+      text-indent: -19.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="33"] {
+      padding-left: 19.8em;
+      text-indent: -19.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="34"] {
+      padding-left: 20.4em;
+      text-indent: -20.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="35"] {
+      padding-left: 21em;
+      text-indent: -21em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="36"] {
+      padding-left: 21.6em;
+      text-indent: -21.6em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="37"] {
+      padding-left: 22.2em;
+      text-indent: -22.2em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="38"] {
+      padding-left: 22.8em;
+      text-indent: -22.8em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="39"] {
+      padding-left: 23.4em;
+      text-indent: -23.4em; }
+    .reveal .slides section pre code .hljs-line[data-indentation="40"] {
+      padding-left: 24em;
+      text-indent: -24em; }
+
+.reveal .slides section .fragment.highlight-red, .reveal .slides section .fragment.highlight-green, .reveal .slides section .fragment.highlight-blue, .reveal .slides section .fragment.highlight-current-red, .reveal .slides section .fragment.highlight-current-green, .reveal .slides section .fragment.highlight-current-blue {
+  color: inherit !important;
+  position: relative; }
+  .reveal .slides section .fragment.highlight-red:after, .reveal .slides section .fragment.highlight-green:after, .reveal .slides section .fragment.highlight-blue:after, .reveal .slides section .fragment.highlight-current-red:after, .reveal .slides section .fragment.highlight-current-green:after, .reveal .slides section .fragment.highlight-current-blue:after {
+    content: ' ';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border-radius: 3px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none; }
+
+.reveal .slides section .fragment.highlight-red.visible:after, .reveal .slides section .fragment.highlight-green.visible:after, .reveal .slides section .fragment.highlight-blue.visible:after {
+  opacity: 1; }
+
+.reveal .slides section .fragment.highlight-current-red.current-fragment:after, .reveal .slides section .fragment.highlight-current-green.current-fragment:after, .reveal .slides section .fragment.highlight-current-blue.current-fragment:after {
+  opacity: 1; }
+
+.reveal .slides section .highlight-red:after, .reveal .slides section .highlight-current-red:after {
+  box-shadow: 0px 0px 0px 4px #dc322f; }
+
+.reveal .slides section .highlight-green:after, .reveal .slides section .highlight-current-green:after {
+  box-shadow: 0px 0px 0px 4px #859900; }
+
+.reveal .slides section .highlight-blue:after, .reveal .slides section .highlight-current-blue:after {
+  box-shadow: 0px 0px 0px 4px #268bd2; }

@@ -1,0 +1,191 @@
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(../../lib/font/fira-code/fira-code.css);
+
+@font-face {
+    font-family: 'aauservice';
+    src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.eot");
+    src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.eot?#iefix") format("embedded-opentype"),url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.woff") format("woff"),url("https://www.resources.aau.dk/design2013/resources/fonts/aauservice.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'aauother';
+    src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.eot");
+    src: url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.eot?#iefix") format("embedded-opentype"),url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.woff") format("woff"),url("https://www.resources.aau.dk/design2013/resources/fonts/aauother.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #ffffff;
+$headingColor: #ffffff;
+$headingTextShadow: none;
+$backgroundColor: #211952;
+$linkColor: #ffffff;
+$linkColorHover: #4306dd;
+$selectionBackgroundColor: $magenta;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+
+.reveal {
+	.slides {
+		section {
+			.MathJax_Display {
+				text-align: center;
+				margin: 1em 0em;
+			}
+
+			a:after {
+				text-transform: none;
+				font-family: "aauother";
+				margin-left: .3em;
+				position: relative;
+				bottom: -.15em;
+				content: 'y';
+			}
+
+			ul {
+				list-style: none;
+
+				li {					
+					&:before {
+						content: 'w';
+						display: inline-block;
+						position: relative;
+						top: -.75em;
+						left: -2em;
+						width: 1.5em;
+						line-height: 1.5em;
+						font-family: "aauother";
+						font-size: .3em;
+						text-transform: none;
+						text-align: center;
+						background-color: $mainColor;
+						color: $backgroundColor;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			pre {
+				box-shadow: none;
+
+				&, code {
+					font-family: 'Fira Code';
+				}
+
+				code {
+					padding: 10px 5px 10px 20px;
+					display: block;
+					height: auto;
+					max-height: 600px;
+					word-wrap: break-word;
+					white-space: pre-wrap;
+					border-radius: 8px;
+
+					$indent-size: .6em;
+	
+					@for $i from 1 through 40 {
+						.hljs-line[data-indentation="#{$i}"] {
+							padding-left: $indent-size * $i;
+							text-indent: -$indent-size * $i;
+						}
+					}
+				}
+			}
+
+			.fragment {
+				&.highlight-red,
+				&.highlight-green,
+				&.highlight-blue,
+				&.highlight-current-red,
+				&.highlight-current-green,
+				&.highlight-current-blue {
+					color: inherit !important;
+					position: relative;
+
+					&:after {
+						content: ' ';
+						position: absolute;
+						top: -2px; left: -2px;
+						width: 100%; height: 100%;
+						padding: 2px;
+						border-radius: 3px;
+						z-index: 10;
+						opacity: 0;
+						transition: opacity .3s;
+						pointer-events: none;
+					}
+				}
+
+				&.highlight-red,
+				&.highlight-green,
+				&.highlight-blue {
+					&.visible:after {
+						opacity: 1;
+					}
+				}
+
+				&.highlight-current-red,
+				&.highlight-current-green,
+				&.highlight-current-blue {
+					&.current-fragment:after {
+						opacity: 1;
+					}
+				}
+			}
+
+			.highlight-red, .highlight-current-red { &:after { box-shadow: 0px 0px 0px 4px $red } }
+			.highlight-green, .highlight-current-green { &:after { box-shadow: 0px 0px 0px 4px $green } }
+			.highlight-blue, .highlight-current-blue { &:after { box-shadow: 0px 0px 0px 4px $blue } }
+		}
+	}
+}
