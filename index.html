@@ -25,9 +25,18 @@
 			body.fullscreen.hide-cursor * {
 				cursor: none !important;
 			}
+
+			.reveal .controls {
+				display: none !important;
+			}
+
+			.show-controls .reveal .controls {
+				display: block !important;
+				color: #666 !important;
+			}
 		</style>
 	</head>
-	<body>
+	<body tabindex="1">
 		<div class="reveal">
 			<div class="slides">
 				<section data-markdown="presentation.md" data-separator="^[=*]{3,}$" data-separator-vertical="^[-]{3,}$" data-separator-notes="^Note: "></section>
@@ -53,7 +62,7 @@
 				markdown: {
 					smartypants: false
 				},
-				controls: false,
+				controls: true,
 				slideNumber: true,
 				overview: false
 			});
@@ -62,6 +71,10 @@
 				setTimeout(() => {
 					hljs.initLineNumbersOnLoad();
 				});
+
+				setTimeout(() => {
+					document.body.focus();
+				}, 300);
 
 				checkFullscreen();
 				showCursor();

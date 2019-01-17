@@ -133,10 +133,10 @@ $selectionBackgroundColor: $magenta;
 
 					$indent-size: .6em;
 	
-					@for $i from 1 through 40 {
+					@for $i from 0 through 40 {
 						.hljs-line[data-indentation="#{$i}"] {
-							padding-left: $indent-size * $i;
-							text-indent: -$indent-size * $i;
+							padding-left: $indent-size * ($i+4);
+							text-indent: -$indent-size * ($i+4);
 						}
 					}
 				}

@@ -6,9 +6,9 @@
 
 ## Liste
 
-- Første element
-- Andet element
-- Tredje element
+- Første element <!-- .element: class="fragment" data-fragment-index="1" -->
+- Andet element <!-- .element: class="fragment" -->
+- Tredje element <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -101,6 +101,9 @@ Threshold   Accuracy    Precision   Recall      Fall-out    F1 score    MCC
 ROC-AUC = <span class="fragment highlight-current-red" data-fragment-index="1">0.753918</span>
 </code></pre>
 </div>
+
+===
+<!-- .element: data-background-iframe="https://clickbait.dayenite.com" data-background-interactive data-state="show-controls" -->
 
 ===
 
