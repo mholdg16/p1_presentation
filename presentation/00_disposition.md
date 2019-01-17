@@ -6,7 +6,7 @@ Gruppe A307
 
 <br>
 
-![aau logo](images/AAU_STUDENTERRAPPORT_white_rgb.png) <!-- .element: class="plain" -->
+![aau logo](images/AAU_STUDENTERRAPPORT_white_rgb.png) <!-- .element: class="plain" width="180px" -->
 
 --------------------------------------------------------------------------------
 
