@@ -4,7 +4,97 @@
 
 ![aau logo](images/AAU_STUDENTERRAPPORT_white_rgb.png) <!-- .element: class="plain" -->
 
----
+--------------------------------------------------------------------------------
+
+## Disposition
+
+1. **Problemanalyse**
+   <span class="aside">*Lisa Engen*</span>
+
+2. **Demo**
+   <span class="aside">*Mathias Holdgaard*</span>
+
+3. **Analyse af features**
+   <span class="aside">*Anders Karlsen*</span>
+
+4. **Evaluering**
+   <span class="aside">*Rasmus Tollund*</span>
+
+5. **Procesanalyse**
+   <span class="aside">*Søren Ravn*</span>
+
+
+================================================================================
+
+# Problemanalyse
+
+Lisa Engen
+
+--------------------------------------------------------------------------------
+
+## Overskrift
+
+Indhold...
+
+================================================================================
+
+# DEMO
+
+Mathias Holdgaard
+
+--------------------------------------------------------------------------------
+
+<!-- .element: data-background-iframe="https://clickbait.dayenite.com" data-background-interactive data-state="show-controls" -->
+
+--------------------------------------------------------------------------------
+
+![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" style="width: 50%;" -->
+
+================================================================================
+
+# Analyse af features
+
+Anders Karlsen
+
+--------------------------------------------------------------------------------
+
+## Overskrift
+
+Indhold...
+
+================================================================================
+
+# Evaluering
+
+Rasmus Tollund
+
+--------------------------------------------------------------------------------
+
+## ROC-AUC
+
+Indhold...
+
+================================================================================
+
+# Procesanalyse
+
+Søren Ravn
+
+--------------------------------------------------------------------------------
+
+## Overskrift
+
+Indhold...
+
+================================================================================
+
+# Slut
+
+================================================================================
+
+# Eksempler
+
+--------------------------------------------------------------------------------
 
 ## Liste
 
@@ -12,7 +102,7 @@
 - Andet element <!-- .element: class="fragment" -->
 - Tredje element <!-- .element: class="fragment" -->
 
----
+--------------------------------------------------------------------------------
 
 ## Formler
 
@@ -21,7 +111,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 Note: Rasmus laver lige nogle formler omkring ROC-AUC.
 
-===
+--------------------------------------------------------------------------------
 
 # KODESTYKKER
 
@@ -32,7 +122,7 @@ int main(void)
 }
 ```
 
----
+--------------------------------------------------------------------------------
 
 <pre><code class="lang-c" data-trim data-noescape>
 uint8_t <span class="fragment highlight-current-red">_get_feature_vector</span>(char str_in[], FeatureSet featureset)
@@ -50,7 +140,7 @@ uint8_t <span class="fragment highlight-current-red">_get_feature_vector</span>(
 
 Note: Et eksempel på et kodestykke med markeringer.
 
----
+--------------------------------------------------------------------------------
 
 <pre><code class="lang-sh" data-trim data-noescape data-line-numbers="off">
 <span class="hljs-built_in">&gt;</span><span class="hljs-meta">bin\classifier</span> <span class="hljs-function">train</span> <span class="hljs-string">"data/training.dataset"</span> <span class="hljs-attr">--print</span>
@@ -69,7 +159,7 @@ no_numbers                  0.5176     0.3958     <span class="fragment highligh
 caps                        1.0000     0.4908     0.0181
 </code></pre>
 
----
+--------------------------------------------------------------------------------
 
 <div style="width: 20em; margin: 0 auto;">
 <pre style="font-size: calc((20 / 0.6) * .01em);"><code class="lang-sh" data-trim data-noescape data-line-numbers="off">
@@ -112,10 +202,3 @@ Threshold   Accuracy    Precision   Recall      Fall-out    F1 score    MCC
 ROC-AUC = <span class="fragment highlight-current-red" data-fragment-index="1">0.753918</span>
 </code></pre>
 </div>
-
-===
-<!-- .element: data-background-iframe="https://clickbait.dayenite.com" data-background-interactive data-state="show-controls" -->
-
-===
-
-# Tak

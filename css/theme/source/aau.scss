@@ -87,6 +87,13 @@ $selectionBackgroundColor: $magenta;
 				background: none;
 			}
 
+			.aside {
+				opacity: 0.4;
+				float: right;
+				margin-left: 100px;
+				width: 400px;
+			}
+
 			a:after {
 				text-transform: none;
 				font-family: "aauother";

@@ -298,6 +298,12 @@ body {
 .reveal .slides section img.plain {
   background: none; }
 
+.reveal .slides section .aside {
+  opacity: 0.4;
+  float: right;
+  margin-left: 100px;
+  width: 400px; }
+
 .reveal .slides section a:after {
   text-transform: none;
   font-family: "aauother";
