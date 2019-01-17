@@ -8,9 +8,9 @@
 
 ## Liste
 
-- Første element <!-- .element: class="fragment" data-fragment-index="1" -->
+- Første element <!-- .element: class="fragment" -->
 - Andet element <!-- .element: class="fragment" -->
-- Tredje element <!-- .element: class="fragment" data-fragment-index="1" -->
+- Tredje element <!-- .element: class="fragment" -->
 
 ---
 
