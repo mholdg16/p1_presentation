@@ -2,6 +2,8 @@
 
 ### Automatisk klassifikation af clickbait
 
+![aau logo](images/AAU_STUDENTERRAPPORT_white_rgb.png) <!-- .element: class="plain" -->
+
 ---
 
 ## Liste

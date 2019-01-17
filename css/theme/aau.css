@@ -295,6 +295,9 @@ body {
   text-align: center;
   margin: 1em 0em; }
 
+.reveal .slides section img.plain {
+  background: none; }
+
 .reveal .slides section a:after {
   text-transform: none;
   font-family: "aauother";

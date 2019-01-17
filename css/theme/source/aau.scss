@@ -83,6 +83,10 @@ $selectionBackgroundColor: $magenta;
 				margin: 1em 0em;
 			}
 
+			img.plain {
+				background: none;
+			}
+
 			a:after {
 				text-transform: none;
 				font-family: "aauother";
