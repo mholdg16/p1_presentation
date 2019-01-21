@@ -2445,6 +2445,11 @@
 
 			cancelAutoSlide();
 			dom.wrapper.classList.add( 'paused' );
+			
+			setTimeout(function() {
+				if (isPaused())
+					stopEmbeddedContent(getCurrentBackground(), { unloadIframes: false });
+			}, 750);
 
 			if( wasPaused === false ) {
 				dispatchEvent( 'paused' );
@@ -2464,6 +2469,7 @@
 		cueAutoSlide();
 
 		if( wasPaused ) {
+			startEmbeddedContent(getCurrentBackground());
 			dispatchEvent( 'resumed' );
 		}
 
@@ -3134,6 +3140,10 @@
 					value.push( indexh + 1 );
 					if( isVerticalSlide() ) value.push( '/', indexv + 1 );
 					break;
+				case 'h0.v?':
+					value.push( indexh );
+					if( isVerticalSlide() && indexv !== 0 ) value.push( '.', indexv );
+					break;
 				default:
 					value.push( indexh + 1 );
 					if( isVerticalSlide() ) value.push( '.', indexv + 1 );
@@ -3244,15 +3254,7 @@
 
 	}
 
-	/**
-	 * Updates the background elements to reflect the current
-	 * slide.
-	 *
-	 * @param {boolean} includeAll If true, the backgrounds of
-	 * all vertical slides (not just the present) will be updated.
-	 */
-	function updateBackground( includeAll ) {
-
+	function getCurrentBackground( includeAll ) {
 		var currentBackground = null;
 
 		// Reverse past/future classes when in RTL mode
@@ -3304,6 +3306,20 @@
 			}
 
 		} );
+
+		return currentBackground;
+	}
+
+	/**
+	 * Updates the background elements to reflect the current
+	 * slide.
+	 *
+	 * @param {boolean} includeAll If true, the backgrounds of
+	 * all vertical slides (not just the present) will be updated.
+	 */
+	function updateBackground( includeAll ) {
+
+		var currentBackground = getCurrentBackground(includeAll);
 
 		// Stop content inside of previous backgrounds
 		if( previousBackground ) {
@@ -4802,7 +4818,7 @@
 				// j, down
 				case 74: case 40: navigateDown(); break;
 				// home
-				case 36: slide( 0 ); break;
+				case 36: slide( 0, 0, 0 ); break;
 				// end
 				case 35: slide( Number.MAX_VALUE ); break;
 				// space
