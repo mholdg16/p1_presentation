@@ -3102,6 +3102,24 @@
 
 
 	/**
+	 * Source: http://blog.stevenlevithan.com/archives/javascript-roman-numeral-converter
+	 */
+	function romanize (num) {
+		if (isNaN(num))
+			return NaN;
+		var digits = String(+num).split(""),
+			key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+				   "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+				   "","I","II","III","IV","V","VI","VII","VIII","IX"],
+			roman = "",
+			i = 3;
+		while (i--)
+			roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+		return Array(+digits.join("") + 1).join("M") + roman;
+	}
+
+
+	/**
 	 * Updates the slide number div to reflect the current slide.
 	 *
 	 * The following slide number formats are available:
@@ -3141,8 +3159,13 @@
 					if( isVerticalSlide() ) value.push( '/', indexv + 1 );
 					break;
 				case 'h0.v?':
-					value.push( indexh );
-					if( isVerticalSlide() && indexv !== 0 ) value.push( '.', indexv );
+					if (indexh > 0) {
+						value.push( indexh );
+						if( isVerticalSlide() && indexv !== 0 ) value.push( '.', indexv );
+					}
+					else {
+						value.push('<span class="roman-numeral">' + romanize(getSlidePastCount() + 1) + '</span>');
+					}
 					break;
 				default:
 					value.push( indexh + 1 );
