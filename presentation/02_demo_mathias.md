@@ -1,12 +1,12 @@
 
-# Demonstration
+# Fremvisning
 
 Mathias Holdgaard
 
 
 *Note:*
 
-**Mathias** vil nu demonstrere det software vi har produceret i løbet af projektet.
+**Mathias** vil nu fremvise det software vi har produceret i løbet af projektet.
 
 
 --------------------------------------------------------------------------------
@@ -29,11 +29,12 @@ Efter nogle iterationer af vores problemanalyse, blev det klart, at vi gerne vil
 
 ![scraper_closeup](images/scraper_closeup.png)
 
-- Automatisk scrolling              <!-- .element: class="fragment" -->
-- Maksimum antal opslag             <!-- .element: class="fragment" -->
-- Skjul opslag                      <!-- .element: class="fragment" -->
-- Download data som JSON,           <!-- .element: class="fragment" -->
-- eller ZIP (inklusiv billeder)     <!-- .element: class="fragment" -->
+- Automatisk scrolling              <!-- .element: class="fragment" data-fragment-index="1" -->
+- Maksimum antal opslag             <!-- .element: class="fragment" data-fragment-index="2" -->
+- Skjul opslag                      <!-- .element: class="fragment" data-fragment-index="3" -->
+- Download data som:                <!-- .element: class="fragment" data-fragment-index="4" -->
+  - JSON                            <!-- .element: class="fragment" data-fragment-index="4" -->
+  - ZIP (inklusiv billeder)         <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
 *Note:*

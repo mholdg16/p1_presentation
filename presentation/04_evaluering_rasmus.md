@@ -9,15 +9,15 @@ Note:
 
 ## TPR og FPR
 
-<div>
+<div class="fragment align-left">
     *True Positive Rate*
     $$TPR = \frac{TP}{TP+FN}$$
-</div><!-- .element: class="fragment" -->
+</div>
 
-<div>
+<div class="fragment align-right">
     *False Positive Rate*
     $$FPR = \frac{FP}{FP+TN}$$
-</div> <!-- .element: class="fragment" -->
+</div>
 
 Note:
 *TPR* er sandsynligheden for at et tilfældig positivt element bliver klassificeret som positiv.
@@ -47,7 +47,7 @@ Note:
 
 ### Vores data
 
-![adskillelsesgraf](images/adskillelsesgraf.png) <!-- .element: class="plain" -->
+![adskillelsesgraf](images/fordeling.png) <!-- .element: class="plain" -->
 
 --------------------------------------------------------------------------------
 

@@ -48,7 +48,7 @@ Note: Et eksempel på et kodestykke med markeringer.
 
 --------------------------------------------------------------------------------
 
-<pre><code class="lang-sh" data-trim data-noescape data-line-numbers="off">
+<pre><code class="hljs nohighlight" data-trim data-noescape data-line-numbers="off">
 <span class="hljs-built_in">&gt;</span><span class="hljs-meta">bin\classifier</span> <span class="hljs-function">train</span> <span class="hljs-string">"data/training.dataset"</span> <span class="hljs-attr">--print</span>
 Features successfully trained.
 
@@ -68,7 +68,7 @@ caps                        1.0000     0.4908     0.0181
 --------------------------------------------------------------------------------
 
 <div style="width: 20em; margin: 0 auto;">
-<pre style="font-size: calc((20 / 0.6) * .01em);"><code class="lang-sh" data-trim data-noescape data-line-numbers="off">
+<pre style="font-size: calc((20 / 0.6) * .01em);"><code class="hljs nohighlight" data-trim data-noescape data-line-numbers="off">
 <span class="hljs-built_in">&gt;</span><span class="hljs-meta">bin\classifier</span> <span class="hljs-function">test</span> <span class="hljs-string">"data/test.dataset"</span> <span class="hljs-attr">--print</span>
 
 CLASSIFIER EVALUATION

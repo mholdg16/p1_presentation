@@ -15,7 +15,7 @@ Gruppe A307
 1. **Problemanalyse**
    <span class="aside">*Lisa Engen*</span>
 
-2. **Demonstration**
+2. **Fremvisning**
    <span class="aside">*Mathias Holdgaard*</span>
 
 3. **Analyse af features**
