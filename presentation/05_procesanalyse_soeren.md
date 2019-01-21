@@ -8,10 +8,10 @@ Søren Ravn
 ---
 
 ## Agenda for procesanalysen
-- Fravær
-- Arbejdsindsats og tilgang
-- Gruppens samarbejde
-- Konklusion
+- Fravær                        <!-- .element: class="fragment" data-fragment-index="1" -->
+- Arbejdsindsats og tilgang     <!-- .element: class="fragment" data-fragment-index="2" -->
+- Gruppens samarbejde           <!-- .element: class="fragment" data-fragment-index="3" -->
+- Konklusion                    <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -24,15 +24,16 @@ Søren Ravn
 ---
 
 ## Arbejdsindsats og tilgang
+![program billede](images/../../images/program.png)
+![rapport billede](images/../../images/rapport.png)
 - SCRUM som agenda
 - Bidrag til rapporten
 - Bidrag til programmet
 - Skæv fordeling
 - Idéer til fremtiden
-  - Samme forventning til alle medlemmer
-  - Tidsestimater
+  - Forventninger til medlemmer
+  - Tidsestimater for opgaver
   - Proaktiv tilgang
-
 
 ---
 
@@ -50,7 +51,3 @@ Søren Ravn
 - Proaktiv tilgang
 - Lederrolle
 - Samme mødetider
-
-===
-
-# TAK
