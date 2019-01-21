@@ -3307,9 +3307,12 @@
 
 		// Stop content inside of previous backgrounds
 		if( previousBackground ) {
+			var stopBackground = previousBackground;
 
-			stopEmbeddedContent( previousBackground );
-
+			setTimeout(function() {
+				if (currentBackground !== stopBackground)
+					stopEmbeddedContent( stopBackground );
+			}, 500);
 		}
 
 		// Start content in the current background

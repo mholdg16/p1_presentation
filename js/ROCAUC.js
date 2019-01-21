@@ -9,7 +9,7 @@ let color_random_line = "#D69D85";
 let window_size = 480;
 
 let positive_data = [0,0,0,0,2,5,8,4,3,0,0];
-let negative_data = [0,3,5,7,4,2,0,0,0,0,0];
+let negative_data = [0,4,5,7,4,2,0,0,0,0,0];
 let offset = { positive: 0, negative: 0 };
 
 let threshold = 5;
@@ -20,10 +20,12 @@ function setup() {
 }
 
 function draw() {
-    background(color_background);
-    drawAxes();
-    drawDataPlots();
-    drawROCPlot();
+    if (document.documentElement.classList.contains("draw-roc")) {
+        background(color_background);
+        drawAxes();
+        drawDataPlots();
+        drawROCPlot();
+    }
 }
 
 function drawAxes() {
@@ -135,15 +137,17 @@ function drawROCPlot() {
     line(50,window_size-50,window_size-50,50);
 }
 
-function keyPressed() {
-    switch(key) {
-        case 'r': offset.positive = offset.negative = 0; threshold = 5; break;
-        case 'a': offset.positive++; break;
-        case 'd': offset.positive--; break;
-        case 'z': offset.negative++; break;
-        case 'x': offset.negative--; break;
-        case 'q': threshold = Math.max(0, threshold - 1); break;
-        case 'e': threshold = Math.min(10, threshold + 1); break;
+function keyPressed(event) {
+    if (document.documentElement.classList.contains("draw-roc")) {
+        switch(event.key) {
+            case 'r': offset.positive = offset.negative = 0; threshold = 5; break;
+            case 'a': offset.positive++; break;
+            case 'd': offset.positive--; break;
+            case 'z': offset.negative++; break;
+            case 'x': offset.negative--; break;
+            case 'q': threshold = Math.max(0, threshold - 1); break;
+            case 'e': threshold = Math.min(10, threshold + 1); break;
+        }
     }
 }
 
