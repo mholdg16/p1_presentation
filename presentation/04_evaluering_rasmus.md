@@ -1,3 +1,6 @@
+<!-- .element: data-background-video="images/animations/particle.mov" data-background-video-loop="true" data-background-video-muted="true" -->
+<br>
+
 # Evaluering
 
 Rasmus Tollund
@@ -41,7 +44,14 @@ Plot af TPR som funktion af FPR
 </div>
 
 Note:
-*Controls:* Q-E -> threshold, A-D -> positive, Z-X -> negative, R -> reset.
+*****
+
+| **Controls** | |
+| :---: | :------------ |
+| `Q` `E` | &pm;threshold |
+| `A` `D` | &pm;positive  |
+| `Z` `X` | &pm;negative  |
+|   `R`   | reset         |
 
 --------------------------------------------------------------------------------
 
