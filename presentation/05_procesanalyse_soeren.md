@@ -24,8 +24,6 @@ Søren Ravn
 ---
 
 ## Arbejdsindsats og tilgang
-![program billede](images/../../images/program.png)
-![rapport billede](images/../../images/rapport.png)
 - SCRUM som agenda
 - Bidrag til rapporten
 - Bidrag til programmet
@@ -34,6 +32,12 @@ Søren Ravn
   - Forventninger til medlemmer
   - Tidsestimater for opgaver
   - Proaktiv tilgang
+
+---
+
+## Fordeling af arbejde
+![program billede](images/../../images/program.png)
+![rapport billede](images/../../images/rapport.png)
 
 ---
 
