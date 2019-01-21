@@ -40,12 +40,11 @@ Blev brugt til at analysere radar signaler i anden verdenskrig.
 
 
 --------------------------------------------------------------------------------
+<!-- .element: data-state="draw-roc" -->
 
 ### Visualisering
 
-<div id="ROCAUC_container">
-
-</div>
+<div id="ROCAUC_container"></div>
 
 Note:
 *****

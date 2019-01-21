@@ -6,9 +6,9 @@
 
 <title>A307 Presentation</title>
 
-<!-- P5 library for ROC-AUC demonstration -->
-<script src="js/p5.min.js"></script>
-<script src="js/ROCAUC.js"></script>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png">
+<meta name="theme-color" content="#211952">
 
 <link rel="stylesheet" href="css/reveal.css">
 <link rel="stylesheet" href="css/theme/aau.css">
@@ -16,15 +16,7 @@
 <!-- Theme used for syntax highlighting of code -->
 <link rel="stylesheet" href="lib/css/vs2015.css">
 
-<!-- Printing and PDF exports -->
-<script>
-var link = document.createElement( 'link' );
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
-
+<!-- Custom styles -->
 <style>
 body.fullscreen.hide-cursor * {
 	cursor: none !important;
@@ -54,6 +46,19 @@ body.fullscreen.hide-cursor * {
 	float: right;
 }
 </style>
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!-- P5 library for ROC-AUC demonstration -->
+<script src="js/p5.min.js"></script>
+<script src="js/ROCAUC.js"></script>
 </head>
 <body tabindex="1">
 <div class="reveal">

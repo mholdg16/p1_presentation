@@ -1,0 +1,15 @@
+{
+    "short_name": "Presentation",
+    "name": "A307 - Automatisk klassifikation af clickbait",
+    "icons": [
+        {
+          "src": "/favicon.png",
+          "type": "image/png",
+          "sizes": "310x310"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#211952",
+    "display": "fullscreen",
+    "theme_color": "#211952"
+}
