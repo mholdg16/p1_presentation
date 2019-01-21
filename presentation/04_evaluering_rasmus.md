@@ -30,6 +30,10 @@ Note:
 
 Plot af TPR som funktion af FPR
 
+Note:
+Blev brugt til at analysere radar signaler i anden verdenskrig.
+
+
 --------------------------------------------------------------------------------
 <!-- .element: data-state="draw-roc" -->
 
@@ -55,6 +59,23 @@ Note:
 
 --------------------------------------------------------------------------------
 
+### Vores ROC-graf
+
+![ROC graf](images/ROC_graf.png)
+
+--------------------------------------------------------------------------------
+
 ### Normalfordelt
 
 ![normalfoldeling af data](images/normalfordeling.png) <!-- .element: class="plain" -->
+--------------------------------------------------------------------------------
+
+### TPR og FPR i sandsynlighedstæthedsfunktioner
+
+![TPR og FPR i sandsynlighedstæthedsfunktioner](images/normalfordeling_fpr_tpr.png) <!-- .element: class="plain"  style="height:45vh" -->
+<div class="align-left">
+    $$TPR=\int_g^1 p(g) dg$$
+</div>
+<div class="align-right">
+    $$FPR=\int_g^1 n(g) dg$$
+</div>
