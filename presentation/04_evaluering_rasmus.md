@@ -36,12 +36,11 @@ Note:
 Plot af TPR som funktion af FPR
 
 --------------------------------------------------------------------------------
+<!-- .element: data-state="draw-roc" -->
 
 ### Visualisering
 
-<div id="ROCAUC_container">
-
-</div>
+<div id="ROCAUC_container"></div>
 
 Note:
 *****
