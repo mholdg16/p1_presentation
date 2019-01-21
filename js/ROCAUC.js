@@ -97,6 +97,8 @@ function drawROCPlot() {
     let fprs = (new Array(11)).map(() => 0);
     let tprs = (new Array(11)).map(() => 0);
 
+    let roc_auc = 0;
+
     for ( let i = 0; i < 11; i++ ) {
         let j = i + offset.positive;
         if ( positive_data[j] !== undefined ) {
@@ -111,7 +113,15 @@ function drawROCPlot() {
             let n = negative_data.reduce(sumArray);
             fprs[i] = fp / n * 10;
         }
+
+        if ( i > 0 && fprs[i] !== undefined && fprs[i-1] !== undefined && tprs[i] !== undefined && tprs[i-1] !== undefined) {
+            roc_auc += 0.5*(tprs[i]+tprs[i-1])*(fprs[i-1]-fprs[i]);
+        }
     }
+
+    stroke(color_text);
+    strokeWeight(2);
+    text('ROC-AUC: '+roc_auc.toFixed(0), window_size-100, window_size-10);
 
     stroke(color_ROC);
     strokeWeight(4);
