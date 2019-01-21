@@ -50,7 +50,3 @@ Søren Ravn
 - Proaktiv tilgang
 - Lederrolle
 - Samme mødetider
-
-===
-
-# TAK
