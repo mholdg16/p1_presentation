@@ -78,9 +78,15 @@ $selectionBackgroundColor: $magenta;
 .reveal {
 	.slides {
 		section {
+			text-align: left;
+
 			.MathJax_Display {
 				text-align: center;
 				margin: 1em 0em;
+			}
+
+			h1, h1 + p, .center-text {
+				text-align: center;
 			}
 
 			h1, h2, h3, h4, h5, h6 {
@@ -91,15 +97,24 @@ $selectionBackgroundColor: $magenta;
 				}
 			}
 
-			img.plain {
-				background: none;
+			p {
+				width: 100%;
 			}
 
-			.aside {
-				opacity: 0.4;
+			img {
+				display: block;
+				margin: 0 auto;
+
+				&.plain {
+					background: none;
+				}
+			}
+
+			aside, .aside {
 				float: right;
-				margin-left: 100px;
 				width: 400px;
+				margin-left: 100px;
+				opacity: 0.4;
 			}
 
 			a:after {
@@ -111,16 +126,28 @@ $selectionBackgroundColor: $magenta;
 				content: 'y';
 			}
 
+			ul, ol {
+				width: 100%;
+
+				li {
+					width: 100%;
+				}
+			}
+
 			ul {
 				list-style: none;
 
-				li {					
+				li {
+					position: relative;
+					margin-left: .25em;
+					margin-bottom: .5em;
+
 					&:before {
 						content: 'w';
 						display: inline-block;
-						position: relative;
-						top: -.75em;
-						left: -2em;
+						position: absolute;
+						top: 1.5em;
+						left: -4em;
 						width: 1.5em;
 						line-height: 1.5em;
 						font-family: "aauother";
@@ -130,6 +157,12 @@ $selectionBackgroundColor: $magenta;
 						background-color: $mainColor;
 						color: $backgroundColor;
 						border-radius: 50%;
+					}
+
+					&:after {
+						content: "";
+						clear: both;
+						display: table;
 					}
 				}
 			}
@@ -223,5 +256,9 @@ $selectionBackgroundColor: $magenta;
 				opacity: 1;
 			}
 		}
+	}
+
+	.roman-numeral {
+		font-family: 'Times New Roman', Times, serif;
 	}
 }

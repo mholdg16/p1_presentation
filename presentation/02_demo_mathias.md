@@ -15,7 +15,7 @@ Mathias Holdgaard
 <!-- .element: data-background-image="images/facebook_scraper_screenshot.png" data-state="background-overlay" -->
 
 ## Facebook Scraper
-<!-- .element: class="with-background" -->
+<!-- .element: class="with-background center-text" -->
 
 
 *Note:*
@@ -34,9 +34,8 @@ Efter nogle iterationer af vores problemanalyse, blev det klart, at vi gerne vil
 - Automatisk scrolling              <!-- .element: class="fragment" data-fragment-index="1" -->
 - Maksimum antal opslag             <!-- .element: class="fragment" data-fragment-index="2" -->
 - Skjul opslag                      <!-- .element: class="fragment" data-fragment-index="3" -->
-- Download data som:                <!-- .element: class="fragment" data-fragment-index="4" -->
-  - JSON                            <!-- .element: class="fragment" data-fragment-index="4" -->
-  - ZIP (inklusiv billeder)         <!-- .element: class="fragment" data-fragment-index="5" -->
+- Download data:  
+  JSON eller ZIP     <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
 *Note:*
@@ -55,7 +54,7 @@ Efter nogle iterationer af vores problemanalyse, blev det klart, at vi gerne vil
 <!-- .element: data-background-iframe="https://clickbait.dayenite.com" data-state="background-overlay" -->
 
 ## Clickbait Labeling System
-<!-- .element: class="with-background" -->
+<!-- .element: class="with-background center-text" -->
 
 
 *Note:*
@@ -84,8 +83,10 @@ Efter vi havde indsamlet en masse overskrifter (7.043), lavede vi et system for 
 
 
 ## Classifier
+<!-- .element: class="center-text" -->
 
 Det endelige program
+<!-- .element: class="center-text" -->
 
 
 --------------------------------------------------------------------------------
