@@ -5,68 +5,52 @@
 
 Søren Ravn
 
-Note:
-**Søren** vil nu snakke...
-
---------------------------------------------------------------------------------
+---
 
 ## Agenda for procesanalysen
-
 - Fravær
-- Arbejdsindsats
-- Vejledermøder
-- Gruppen generelt
+- Arbejdsindsats og tilgang
+- Gruppens samarbejde
 - Konklusion
 
---------------------------------------------------------------------------------
+---
 
 ## Fravær
-
-- Kom bagud med arbejde
-- Samtale med vejleder
-- Mere hjemmearbejde
+- Mangel på kommunikation fra fraværende
+- Manglende tillid i gruppen
+- Løsning halvejs gennem projektet
 - Færre møder om ugen
-- Gruppeleder til P2
 
-(Billede over fravær stats)
-
---------------------------------------------------------------------------------
+---
 
 ## Arbejdsindsats og tilgang
-
-- SCRUM
-- Rapporten
-- Programmet
+- SCRUM som agenda
+- Bidrag til rapporten
+- Bidrag til programmet
 - Skæv fordeling
 - Idéer til fremtiden
   - Samme forventning til alle medlemmer
-  - Lederrolle
   - Tidsestimater
   - Proaktiv tilgang
 
---------------------------------------------------------------------------------
 
-## Vejledermøderne
+---
 
-- Spørgerunde mandag
-- Diskussion under møderne
-- Referat af alle møder
-- Kommentarer i rapporten rettes til
-- Enkelte aflyste møder
-
---------------------------------------------------------------------------------
-
-## Gruppen generelt
-
+## Gruppens samarbejde
+- Godt social samvær
 - Samarbejdskontrakten
 - Lederrolle
 - Vidensdeling
-- Kommunikation udenfor møderne
+- Kontakt udenfor gruppemøder
 
---------------------------------------------------------------------------------
+---
 
 ## Konklusion
 - Bedre struktur
 - Proaktiv tilgang
-- Lederrolle 
+- Lederrolle
 - Samme mødetider
+
+===
+
+# TAK
