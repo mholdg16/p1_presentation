@@ -12,7 +12,7 @@ Note:
 
 ## TPR og FPR
 
-- <!-- .element: class="fragment" --> *True Positive Rate*
+- *True Positive Rate*
   <span class="aside">$$TPR = \frac{TP}{TP+FN}$$</span>
 - <!-- .element: class="fragment" --> *False Positive Rate*
   <span class="aside">$$FPR = \frac{FP}{FP+TN}$$</span>
@@ -53,21 +53,21 @@ Note:
 
 --------------------------------------------------------------------------------
 
-![diskret sandsynlighedsfordeling](images/fordeling.png) <!-- .element: class="plain" -->
-
-Note:
-*****
-
-**Vores data** *diskret sandsynlighedsfordeling*
-
---------------------------------------------------------------------------------
-
 ![vores ROC graf](images/ROC_graf.png) <!-- .element: class="plain" -->
 
 Note:
 *****
 
 **Vores ROC graf**
+
+--------------------------------------------------------------------------------
+
+![diskret sandsynlighedsfordeling](images/fordeling.png) <!-- .element: class="plain" -->
+
+Note:
+*****
+
+**Vores data** *diskret sandsynlighedsfordeling*
 
 --------------------------------------------------------------------------------
 
@@ -80,12 +80,10 @@ Note:
 
 --------------------------------------------------------------------------------
 
-### TPR og FPR i sandsynlighedstæthedsfunktioner
-
 ![TPR og FPR i sandsynlighedstæthedsfunktioner](images/normalfordeling_fpr_tpr.png) <!-- .element: class="plain"  style="height:45vh" -->
 <div class="align-left">
-    $$TPR=\int_g^1 p(g) dg$$
+    $$TPR=\int\_{g\_0}^{g\_{max}} p(g) dg$$
 </div>
 <div class="align-right">
-    $$FPR=\int_g^1 n(g) dg$$
+    $$FPR=\int\_{g\_0}^{g\_{max}} n(g) dg$$
 </div>
