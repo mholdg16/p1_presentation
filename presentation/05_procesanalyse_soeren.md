@@ -94,5 +94,5 @@ Søren Ravn
 - Struktur på SCRUM, tilføje mangler-gennemgang
 - Proaktiv ift. projektopgaver
 - Indføre lederrolle - ansvar for gruppen og arbejde
-- Fortsætte med SCRUM og mødetider
+- Fortsætte med mødetider 
 - Tak
