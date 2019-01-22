@@ -45,6 +45,14 @@ body.fullscreen.hide-cursor * {
 .align-right {
 	float: right;
 }
+.align-top-left, .align-top-right,
+.align-bottom-left, .align-bottom-right { position: absolute; }
+.align-top-left, .align-top-right { top: 1em; }
+.align-bottom-left, .align-bottom-right { bottom: 1em; }
+.align-top-left, .align-bottom-left { left: 0; }
+.align-top-right, .align-bottom-right { right: 0; }
+
+.reveal .slides section .no-scrollbars, .no-scrollbars > * { overflow: hidden !important; }
 </style>
 
 <!-- Printing and PDF exports -->

@@ -293,6 +293,10 @@ body {
 
 .reveal .slides section {
   text-align: left; }
+  .reveal .slides section pre.stretch code {
+    height: 100%;
+    max-height: 100%;
+    box-sizing: border-box; }
   .reveal .slides section .MathJax_Display {
     text-align: center;
     margin: 1em 0em; }
@@ -301,7 +305,9 @@ body {
   .reveal .slides section h1.with-background, .reveal .slides section h2.with-background, .reveal .slides section h3.with-background, .reveal .slides section h4.with-background, .reveal .slides section h5.with-background, .reveal .slides section h6.with-background {
     background-color: #ffffff;
     color: #211952;
-    padding-top: .05em; }
+    padding-top: .05em;
+    padding-left: .25em;
+    padding-right: .25em; }
   .reveal .slides section p {
     width: 100%; }
   .reveal .slides section img {
