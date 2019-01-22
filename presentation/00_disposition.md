@@ -17,7 +17,7 @@
 1. **Problemanalyse**
    <span class="aside">*Lisa Engen*</span>
 
-2. **Fremvisning**
+2. **Software**
    <span class="aside">*Mathias Holdgaard*</span>
 
 3. **Analyse af features**
