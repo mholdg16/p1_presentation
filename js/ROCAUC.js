@@ -95,9 +95,14 @@ function drawDataPlots() {
     stroke(color_threshold);
     line(window_size+50+threshold*sf, 50,window_size+50+threshold*sf,window_size-50);
 }
+
+function numArray(len) {
+    return Array(len).fill(0);
+}
+
 function drawROCPlot() {
-    let fprs = (new Array(11)).map(() => 0);
-    let tprs = (new Array(11)).map(() => 0);
+    let fprs = numArray(11);
+    let tprs = numArray(11);
 
     let roc_auc = 0;
 
@@ -108,6 +113,9 @@ function drawROCPlot() {
             let p = positive_data.reduce(sumArray);
             tprs[i] = tp / p * 10;
         }
+        else if (i < Math.abs(offset.positive)) {
+            tprs[i] = 10;
+        }
 
         let k = i + offset.negative;
         if ( negative_data[k] !== undefined ) {
@@ -115,15 +123,18 @@ function drawROCPlot() {
             let n = negative_data.reduce(sumArray);
             fprs[i] = fp / n * 10;
         }
+        else if (i < Math.abs(offset.negative)) {
+            fprs[i] = 10;
+        }
 
-        if ( i > 0 && fprs[i] !== undefined && fprs[i-1] !== undefined && tprs[i] !== undefined && tprs[i-1] !== undefined) {
-            roc_auc += 0.5*(tprs[i]+tprs[i-1])*(fprs[i-1]-fprs[i]);
+        if ( i > 0 ) {
+            roc_auc += 0.5 * (tprs[i] + tprs[i-1]) * (fprs[i-1] - fprs[i]);
         }
     }
 
     stroke(color_text);
     strokeWeight(2);
-    text('ROC-AUC: '+roc_auc.toFixed(0), window_size-100, window_size-10);
+    text('ROC-AUC: '+roc_auc.toFixed(1), window_size-100, window_size-10);
 
     stroke(color_ROC);
     strokeWeight(4);
