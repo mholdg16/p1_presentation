@@ -464,7 +464,11 @@
 							event.preventDefault();
 							return false;
 						}
-						currentSlide.contentWindow.postMessage( JSON.stringify({ method: 'triggerKey', args: [ event.keyCode ] }), '*' );
+
+						let message = JSON.stringify({ method: 'triggerKey', args: [ event.keyCode, event.key ] });
+
+						currentSlide.contentWindow.postMessage( message, '*' );
+						window.opener.postMessage( message, '*' );
 					} );
 
 				}
@@ -608,7 +612,7 @@
 
 						diff = now.getTime() - start.getTime();
 
-						clockEl.innerHTML = now.toLocaleTimeString( 'en-US', { hour12: true, hour: '2-digit', minute:'2-digit' } );
+						clockEl.innerHTML = now.toLocaleTimeString( 'da-DK', { hour12: false, hour: '2-digit', minute:'2-digit' } );
 						_displayTime( hoursEl, minutesEl, secondsEl, diff );
 						if (timings !== null) {
 							_updatePacing(diff);

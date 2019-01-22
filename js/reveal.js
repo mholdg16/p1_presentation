@@ -5604,8 +5604,10 @@
 		removeKeyBinding: removeKeyBinding,
 
 		// Programatically triggers a keyboard event
-		triggerKey: function( keyCode ) {
+		triggerKey: function( keyCode, key ) {
 			onDocumentKeyDown( { keyCode: keyCode } );
+			if (typeof window.keyPressed === "function")
+				window.keyPressed( { keyCode: keyCode, key: key } );
 		},
 
 		// Registers a new shortcut to include in the help overlay
