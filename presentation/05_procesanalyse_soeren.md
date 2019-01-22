@@ -8,50 +8,46 @@ Søren Ravn
 ---
 
 ## Agenda for procesanalysen
-- Fravær                        <!-- .element: class="fragment" data-fragment-index="1" -->
-- Arbejdsindsats og tilgang     <!-- .element: class="fragment" data-fragment-index="2" -->
-- Gruppens samarbejde           <!-- .element: class="fragment" data-fragment-index="3" -->
-- Konklusion                    <!-- .element: class="fragment" data-fragment-index="4" -->
+- Fravær                        <!-- .element: class="fragment" -->
+- Arbejdstilgang og -indsats    <!-- .element: class="fragment" -->
+- Gruppens samarbejde           <!-- .element: class="fragment" -->
+- Konklusion                    <!-- .element: class="fragment" -->
 
 ---
 
 ## Fravær
-- Mangel på kommunikation fra fraværende
-- Manglende tillid i gruppen
-- Løsning halvejs gennem projektet
-- Færre møder om ugen
+- Mangel på kommunikation fra fraværende <!-- .element: class="fragment" -->
+- Manglende tillid i gruppen             <!-- .element: class="fragment" -->
+- Løsning halvejs gennem projektet       <!-- .element: class="fragment" -->
+- Færre møder om ugen                    <!-- .element: class="fragment" -->
 
 ---
 
-## Arbejdsindsats og tilgang
+## Arbejdstilgang og -indsats
 - SCRUM som agenda
-- Bidrag til rapporten
-- Bidrag til programmet
-- Skæv fordeling
-- Idéer til fremtiden
-  - Forventninger til medlemmer
-  - Tidsestimater for opgaver
-  - Proaktiv tilgang
+  
+![program](images/bidrag.png) <!-- .element: class="plain fragment" -->
 
 ---
 
-## Fordeling af arbejde
-![program billede](images/../../images/program.png)
-![rapport billede](images/../../images/rapport.png)
+### Fremtidige mål for gruppearbejde
+- Forventninger til medlemmer <!-- .element: class="fragment" -->
+- Tidsestimater for opgaver   <!-- .element: class="fragment" -->
+- Proaktiv tilgang            <!-- .element: class="fragment" -->
 
 ---
 
 ## Gruppens samarbejde
-- Godt social samvær
-- Samarbejdskontrakten
-- Lederrolle
-- Vidensdeling
-- Kontakt udenfor gruppemøder
+- Godt social samvær          <!-- .element: class="fragment" -->
+- Samarbejdskontrakten        <!-- .element: class="fragment" -->
+- Lederrolle                  <!-- .element: class="fragment" -->
+- Vidensdeling                <!-- .element: class="fragment" -->
+- Kontakt udenfor gruppemøder <!-- .element: class="fragment" -->
 
 ---
 
 ## Konklusion
-- Bedre struktur
-- Proaktiv tilgang
-- Lederrolle
-- Samme mødetider
+- Bedre struktur   <!-- .element: class="fragment" -->
+- Proaktiv tilgang <!-- .element: class="fragment" -->
+- Lederrolle       <!-- .element: class="fragment" -->
+- Samme mødetider  <!-- .element: class="fragment" -->

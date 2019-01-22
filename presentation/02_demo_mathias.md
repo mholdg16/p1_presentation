@@ -34,8 +34,7 @@ Efter nogle iterationer af vores problemanalyse, blev det klart, at vi gerne vil
 - Automatisk scrolling              <!-- .element: class="fragment" data-fragment-index="1" -->
 - Maksimum antal opslag             <!-- .element: class="fragment" data-fragment-index="2" -->
 - Skjul opslag                      <!-- .element: class="fragment" data-fragment-index="3" -->
-- Download data:  
-  JSON eller ZIP     <!-- .element: class="fragment" data-fragment-index="5" -->
+- Download data: JSON eller ZIP     <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
 *Note:*

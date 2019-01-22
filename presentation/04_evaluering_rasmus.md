@@ -53,21 +53,31 @@ Note:
 
 --------------------------------------------------------------------------------
 
-### Vores data
+![diskret sandsynlighedsfordeling](images/fordeling.png) <!-- .element: class="plain" -->
 
-![adskillelsesgraf](images/fordeling.png) <!-- .element: class="plain" -->
+Note:
+*****
 
---------------------------------------------------------------------------------
-
-### Vores ROC-graf
-
-![ROC graf](images/ROC_graf.png)
+**Vores data** *diskret sandsynlighedsfordeling*
 
 --------------------------------------------------------------------------------
 
-### Normalfordelt
+![vores ROC graf](images/ROC_graf.png) <!-- .element: class="plain" -->
+
+Note:
+*****
+
+**Vores ROC graf**
+
+--------------------------------------------------------------------------------
 
 ![normalfoldeling af data](images/normalfordeling.png) <!-- .element: class="plain" -->
+
+Note:
+*****
+
+**Normalfordeling af data**
+
 --------------------------------------------------------------------------------
 
 ### TPR og FPR i sandsynlighedstæthedsfunktioner
