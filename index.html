@@ -36,7 +36,7 @@ body.fullscreen.hide-cursor * {
 }
 
 .reveal .slide-number {
-	font-size: 32px;
+	font-size: .5em;
 }
 
 .align-left {
@@ -99,7 +99,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <section data-markdown data-background-video="images/animations/particle.mov" data-background-video-loop data-background-video-muted><textarea data-template>
 	<br>
 
-	# Slut
+	## Slut
 </textarea></section>
 
 <section>
@@ -136,6 +136,8 @@ Reveal.initialize({
 window.addEventListener("load", () => {
 	setTimeout(() => {
 		hljs.initLineNumbersOnLoad();
+
+		writeDisposition();
 	});
 
 	setTimeout(() => {
@@ -184,6 +186,28 @@ function isLink(el) {
 		el = el.parentNode;
 	}
 	return false;
+}
+
+function writeDisposition() {
+	var headlines = document.querySelectorAll(".reveal .slides h1");
+	var disposition = document.createElement("ol");
+
+	headlines.forEach(headline => {
+		if (!headline.hasAttribute("data-exclude")) {
+			var list_item = document.createElement("li"),
+				sibling = headline.nextElementSibling,
+				hasParagraph = sibling && sibling.tagName == "P",
+				author = hasParagraph ? sibling.textContent : "";
+			
+			list_item.innerHTML = `<b>${headline.textContent}</b> <i class="aside">${author}</i>`;
+
+			disposition.appendChild(list_item);
+		}
+	});
+
+	document.querySelectorAll(".reveal .slides disposition").forEach(placeholder => {
+		placeholder.innerHTML = disposition.outerHTML;
+	});
 }
 </script>
 </body>

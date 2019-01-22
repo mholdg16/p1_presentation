@@ -1,4 +1,5 @@
 # Eksempler
+<!-- .element: data-exclude="1" -->
 
 --------------------------------------------------------------------------------
 
@@ -20,6 +21,7 @@ Note: Rasmus laver lige nogle formler omkring ROC-AUC.
 --------------------------------------------------------------------------------
 
 # KODESTYKKER
+<!-- .element: data-exclude="1" -->
 
 ```c
 int main(void)
