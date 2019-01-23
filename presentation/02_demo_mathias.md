@@ -215,7 +215,6 @@ C --> |features for-each|H(calculate_probabilities)
 
 --------------------------------------------------------------------------------
 
-![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
@@ -241,7 +240,6 @@ E --> |dataset for-each| K(calc_confusion_matrix)
 
 --------------------------------------------------------------------------------
 
-![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
@@ -269,11 +267,10 @@ J --> |ConfusionMatrix| K(print_confusion_matrix)
 
 --------------------------------------------------------------------------------
 
-![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
-
+<input value="threshold 0.000925 --save --print" style="width: 100%;" onfocus="this.select();navigator.clipboard.writeText(this.value)">
 
 --------------------------------------------------------------------------------
 
@@ -284,7 +281,6 @@ J --> |ConfusionMatrix| K(print_confusion_matrix)
 
 --------------------------------------------------------------------------------
 
-![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
