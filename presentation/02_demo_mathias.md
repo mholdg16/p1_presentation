@@ -134,7 +134,7 @@ Efter vi havde indsamlet en masse overskrifter (7.043 stk.), lavede vi et system
   - Sektionsdiagram
   - Indsamlede overskrifter
 
-**(Overgang)**: De indsamlede overskrifter, med 3 ens bedømmelser, kan via systemet downloaded opdelt i to filer, `training.dataset` og `test.dataset`, som var formateret...
+**(Overgang)**: De indsamlede overskrifter, med 3 ens bedømmelser, kan via systemet downloades opdelt i to filer, `training.dataset` og `test.dataset`, som var formateret...
 
 
 --------------------------------------------------------------------------------
@@ -185,49 +185,108 @@ Vores endelige program
 
 *Note:*
 
-TODO: oversigt over programmet (ala flowchart)
-
-TODO: gennemgå programmets kildekode, for hver kommando
-
---------------------------------------------------------------------------------
-
-
-![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
-
-
-
-*Note:*
-
-**(Træk *Hyper* vinduet over til projektorskærmen)**
 
 
 --------------------------------------------------------------------------------
-<!-- .element: class="stretch" -->
+
+<div class="mermaid-lazy">
+graph LR
+A[main] --> B(interface)
+B --> C(command)
+C --> D[train]
+C --> E[test]
+C --> F[threshold]
+C --> G[classify]
+</div>
+
+--------------------------------------------------------------------------------
 
 ### train
+<!-- .element: class="center-text" -->
+
+<div class="mermaid-lazy">
+graph LR
+A[train] --- B(load_dataset)
+A --- |dataset| C(train_features)
+A --- D{flag: --print}
+D --> |trained_features| E(print_trained_features)
+C --- F(features_import)
+C --> |dataset for-each|G(add_feature_count)
+C --> |features for-each|H(calculate_probabilities)
+</div>
+
+--------------------------------------------------------------------------------
+
+![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
 <input value="train &quot;data/training.dataset&quot; --print" style="width: 100%;" onfocus="this.select();navigator.clipboard.writeText(this.value)">
 
 --------------------------------------------------------------------------------
-<!-- .element: class="stretch" -->
 
 ### test
+<!-- .element: class="center-text" -->
+
+<div class="mermaid-lazy">
+graph LR
+B(load_dataset) --- A[test]
+C(load_trained_features) --- A
+A --- |dataset| D(score_dataset)
+A --- |scored dataset| E(test_classifier)
+A --- F{flag: --print}
+F --> G(print_evaluation)
+A --- I{flag: --save}
+I --> J(Save CSV-file)
+E --> |dataset for-each| K(calc_confusion_matrix)
+</div>
+
+--------------------------------------------------------------------------------
+
+![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 
 <input value="test &quot;data/test.dataset&quot; --print" style="width: 100%;" onfocus="this.select();navigator.clipboard.writeText(this.value)">
 
 --------------------------------------------------------------------------------
-<!-- .element: class="stretch" -->
 
 ### threshold
+<!-- .element: class="center-text" -->
+
+<div class="mermaid-lazy">
+graph LR
+A[threshold] --- B{flag: --calc}
+B --- |YES| E(calculate_threshold)
+E --- D{flag: --save}
+B --- |NO, but number entered| L(set threshold)
+L --- D
+D --> F(save_config)
+B --- |NO| H(get_threshold)
+A --- C{flag: --print}
+C --- |threshold| I(classify_dataset)
+C --- J(test_classification)
+J --> |ConfusionMatrix| K(print_confusion_matrix)
+</div>
 
 --------------------------------------------------------------------------------
-<!-- .element: class="stretch" -->
+
+![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
+
+*Note:*
+
+
+
+--------------------------------------------------------------------------------
 
 ### classify
+<!-- .element: class="center-text" -->
+
+*Note:*
+
+--------------------------------------------------------------------------------
+
+![program_demo](images/program_demo_screenshot.png)<!-- .element: class="plain" width="75%" -->
 
 *Note:*
 

@@ -330,13 +330,13 @@ body {
   .reveal .slides section ul, .reveal .slides section ol {
     width: 100%; }
     .reveal .slides section ul li, .reveal .slides section ol li {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: .5em; }
   .reveal .slides section ul {
     list-style: none; }
     .reveal .slides section ul li {
       position: relative;
-      margin-left: .25em;
-      margin-bottom: .5em; }
+      margin-left: .25em; }
       .reveal .slides section ul li:before {
         content: 'w';
         display: inline-block;

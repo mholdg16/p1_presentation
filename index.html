@@ -53,6 +53,9 @@ body.fullscreen.hide-cursor * {
 .align-top-right, .align-bottom-right { right: 0; }
 
 .reveal .slides section .no-scrollbars, .no-scrollbars > * { overflow: hidden !important; }
+
+.mermaid-lazy { visibility: hidden; }
+.mermaid-lazy[data-processed="true"] { visibility: visible; }
 </style>
 
 <!-- Printing and PDF exports -->
@@ -113,6 +116,45 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <script src="js/reveal.js"></script>
 
 <script>
+let mermaid_config = {
+	startOnLoad: true,
+	theme: "dark",
+	themeCSS: `
+		.node rect, .node polygon {
+			fill: #1E1E1E;
+			stroke: #9B9B9B;
+		}
+		.label {
+			color: #DCDCDC;
+			text-align: center;
+		}
+		.label div {
+			padding-top: .5em;
+			line-height: 1;
+		}
+		.node polygon + .label {
+			color: #4EC9B0;
+		}
+		.edgePath .path {
+			stroke: #9B9B9B;
+		}
+		.edgePath .arrowheadPath {
+			fill: #9B9B9B;
+		}
+		.edgeLabel {
+			background-color: transparent;
+		}
+	`,
+	callback: () => {
+		document.querySelectorAll(".mermaid rect").forEach(el => {
+			if (el.getAttribute("rx") == 5) {
+				el.setAttribute("rx", 50);
+				el.setAttribute("ry", 50);
+			}
+		});
+	}
+};
+
 // More info about config & dependencies:
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
@@ -122,8 +164,20 @@ Reveal.initialize({
 		{ src: 'plugin/markdown/markdown.js' },
 		{ src: 'plugin/math/math.js' },
 		{ src: 'plugin/notes/notes.js', async: true },
-		{ src: 'plugin/highlight/highlight.js', async: true, callback: () => { hljs.initHighlightingOnLoad() } },
-		{ src: 'plugin/line-numbers/highlightjs-line-numbers.js', async: true }
+		{ src: 'plugin/highlight/highlight.js', async: true,
+			callback: () => { hljs.initHighlightingOnLoad() }
+		},
+		{ src: 'plugin/line-numbers/highlightjs-line-numbers.js', async: true },
+		{ src: 'plugin/mermaid/mermaid.min.js', async: true,
+			callback: () => {
+				mermaid.initialize(mermaid_config);
+
+				var curr_slide = document.querySelector(".reveal .slides section.stack section.present"),
+					curr_el = curr_slide ? curr_slide.querySelector(".mermaid-lazy") : undefined;
+
+				if (curr_el) mermaid.init(undefined, curr_el);
+			}
+		}
 	],
 	markdown: {
 		smartypants: false
@@ -131,6 +185,21 @@ Reveal.initialize({
 	controls: true,
 	slideNumber: "h0.v?",
 	overview: false
+});
+
+Reveal.addEventListener("slidechanged", event => {
+	// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+	var nextSlide = (event.currentSlide && event.currentSlide.nextElementSibling) || undefined;
+	
+	var curr_el = event.currentSlide && event.currentSlide.querySelector(".mermaid-lazy"),
+		prev_el = event.previousSlide && event.previousSlide.querySelector(".mermaid-lazy"),
+		next_el = nextSlide && nextSlide.querySelector(".mermaid-lazy");
+
+	if (window.mermaid && typeof mermaid.init === "function") {
+		if (curr_el) mermaid.init(undefined, curr_el);
+		if (next_el) mermaid.init(undefined, next_el);
+		if (prev_el) mermaid.init(undefined, prev_el);
+	}
 });
 
 window.addEventListener("load", () => {

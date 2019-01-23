@@ -140,6 +140,7 @@ $selectionBackgroundColor: $magenta;
 
 				li {
 					width: 100%;
+					margin-bottom: .5em;
 				}
 			}
 
@@ -149,7 +150,6 @@ $selectionBackgroundColor: $magenta;
 				li {
 					position: relative;
 					margin-left: .25em;
-					margin-bottom: .5em;
 
 					&:before {
 						content: 'w';
