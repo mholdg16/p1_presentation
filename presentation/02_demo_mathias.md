@@ -175,13 +175,11 @@ Stort strømnedbrud lammer københavnsk bydel	<span class="hljs-number">0</span>
 ...således. Dette format kaldes også `TSV`, som betyder *tabulatorseparerede værdier*. Hver linje af et element i datasættet, og elementets værdier er delt op med et tabulatortegn. Datasættet består af overskrifter og deres tilhørende label; `0` for *ikke-clickbait* og `1` for *clickbait*.
 
 --------------------------------------------------------------------------------
-
+<!-- .element: data-background-image="images/sourcecode.jpg" -->
 
 ## Classifier
-<!-- .element: class="center-text" -->
+<!-- .element: class="with-background center-text" -->
 
-Vores endelige program
-<!-- .element: class="center-text" -->
 
 *Note:*
 
